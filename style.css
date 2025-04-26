@@ -94,7 +94,6 @@ body {
   font-family: "Cormorant";
   font-weight: 600;
   font-size: 1.375rem;
-
   margin-top: 0.5rem;
 }
 main,
@@ -107,11 +106,46 @@ header {
 .welcome__container p {
   text-align: justify;
 }
-.welcome__container p:last-of-type {
-  margin-top: 1rem;
+
+.welcome__calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   font-family: "Comporant";
-  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  margin-top: 1rem;
+}
+.welcome__calendar p {
+  font-family: "Comporant";
   color: var(--color-dark-02);
+  margin-inline: auto;
+}
+.welcome__calendar-heart {
+  position: absolute;
+  top: 65%;
+  left: 54.5%;
+  animation: rotating 3s infinite;
+}
+
+@keyframes rotating {
+  0% {
+    rotate: 0;
+  }
+  50% {
+    rotate: 10deg;
+  }
+  100% {
+    rotate: 0;
+  }
+}
+.welcome__calendar-day-week,
+.welcome__calendar-day-numbers {
+  display: flex;
+  gap: 1rem;
+}
+.welcome__calendar-day-numbers {
+  justify-content: space-around;
 }
 .location__container {
   text-align: center;
@@ -125,7 +159,6 @@ header {
   padding: 0.5rem;
   border: 1px solid black;
   background: none;
-  font-weight: 600;
   transition-duration: var(--transition-duration);
   transition-property: background;
   margin-top: 1rem;
@@ -215,29 +248,39 @@ header {
   margin-left: -0.5rem;
 }
 .dresscode__colors div:nth-of-type(1) {
-  background-color: #ded7cf;
-}
-.dresscode__colors div:nth-of-type(2) {
-  background-color: #f1e3da;
-}
-.dresscode__colors div:nth-of-type(3) {
-  background-color: #b08e82;
-}
-.dresscode__colors div:nth-of-type(4) {
-  background-color: #997c6e;
+  background-color: #f5f5dc;
 }
 .dresscode__colors div:nth-of-type(5) {
-  background-color: #6e4d3e;
+  background-color: #efdecd;
+}
+.dresscode__colors div:nth-of-type(2) {
+  background-color: #cac4b0;
+}
+.dresscode__colors div:nth-of-type(3) {
+  background-color: #997c6e;
 }
 .dresscode__colors div:nth-of-type(6) {
-  background-color: #240f0e;
+  background-color: #a5694f;
+}
+.dresscode__colors div:nth-of-type(7) {
+  background-color: #592d00;
+}
+.dresscode__colors div:nth-of-type(5) {
+  background-color: #d39b85;
+}
+.dresscode__colors div:nth-of-type(4) {
+  background-color: #6c7059;
 }
 .dresscode__gallery {
   overflow-x: auto;
   white-space: nowrap;
+  scrollbar-width: none;
 }
 .dresscode__photo {
   display: inline-block;
+}
+.dresscode__photo img {
+  max-height: 500px;
 }
 .wishes__block {
   display: flex;

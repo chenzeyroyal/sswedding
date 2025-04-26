@@ -21,3 +21,17 @@ function updateCountdown() {
 
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+const dresscodeGallery = document.querySelector(".dresscode__gallery");
+
+function autoScroll() {
+  dresscodeGallery.scrollLeft += 1; // Чем больше число, тем быстрее
+  if (
+    dresscodeGallery.scrollLeft >=
+    dresscodeGallery.scrollWidth - dresscodeGallery.clientWidth
+  ) {
+    return;
+  }
+}
+
+setInterval(autoScroll, 20); // Чем меньше интервал, тем плавнее
