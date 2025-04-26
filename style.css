@@ -74,6 +74,7 @@ body {
   gap: 3rem;
   color: var(--color-dark-01);
 }
+
 .header__title {
   font-family: "Noto Serif Display", serif;
 
@@ -275,6 +276,7 @@ header {
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
+  padding-top: 1rem;
 }
 .dresscode__photo {
   display: inline-block;
