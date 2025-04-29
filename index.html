@@ -174,14 +174,14 @@
             своих нарядах вы поддержите цветовую гамму нашей свадьбы.
           </p>
           <div class="dresscode__colors">
-            <div class="dresscode__colors-block first"></div>
-            <div class="dresscode__colors-block"></div>
-            <div class="dresscode__colors-block"></div>
-            <div class="dresscode__colors-block"></div>
-            <div class="dresscode__colors-block"></div>
-            <div class="dresscode__colors-block"></div>
-            <div class="dresscode__colors-block"></div>
-            <div class="dresscode__colors-block"></div>
+            <div class="dresscode__colors-block no-animation first"></div>
+            <div class="dresscode__colors-block no-animation"></div>
+            <div class="dresscode__colors-block no-animation"></div>
+            <div class="dresscode__colors-block no-animation"></div>
+            <div class="dresscode__colors-block no-animation"></div>
+            <div class="dresscode__colors-block no-animation"></div>
+            <div class="dresscode__colors-block no-animation"></div>
+            <div class="dresscode__colors-block no-animation"></div>
           </div>
           <div class="dresscode__gallery">
             <div class="dresscode__photo">
@@ -227,6 +227,10 @@
               />
             </div>
           </div>
+          <div class="dresscode__scroll-hint">
+            <img src="./icons/arrow-right.svg" alt="" />
+            <p>ЛИСТАЙ</p>
+          </div>
         </div>
       </section>
       <div class="splitter"></div>
@@ -267,7 +271,36 @@
           </div>
         </div>
       </section>
+      <div class="splitter"></div>
 
+      <section class="form">
+        <div class="form__container container">
+          <h5>АНКЕТА ГОСТЯ</h5>
+          <p>
+            Ваши ответы очень помогут нам при организации свадьбы. Пожалуйста,
+            заполните форму до 07.07.2025
+          </p>
+          <form
+            action="https://formsubmit.co/alex_kozhenkin@mail.ru"
+            method="POST"
+          >
+            <p>Ваше имя и фамилия</p>
+            <input type="text" name="name" paceholder="Иван Иванов" required />
+            <p>Сможете ли присутствовать?</p>
+            <label for="">
+              <input type="radio" name="contact" id="" required />
+              Конечно, буду
+            </label>
+            <label for="">
+              <input type="radio" name="contact" id="" required />
+              К сожалению, нет
+            </label>
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_captcha" value="false" />
+            <button class="button" type="submit">ОТПРАВИТЬ</button>
+          </form>
+        </div>
+      </section>
       <section class="countdown">
         <div class="countdown__block">
           <p>ДО ВСТРЕЧИ ЧЕРЕЗ</p>

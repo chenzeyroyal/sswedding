@@ -1,0 +1,64 @@
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hero__paragraph {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.hero__sofya {
+  padding-left: 50%;
+}
+.hero__heart {
+  margin: 0 auto;
+  rotate: 10deg;
+  animation: rotate 3s ease-in-out infinite;
+  animation: heartbeat 3s ease-in-out infinite;
+}
+@keyframes rotate {
+  0% {
+    rotate: 10deg;
+  }
+  50% {
+    rotate: -10deg;
+  }
+  100% {
+    rotate: 10deg;
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  } /* первый удар */
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hero__invite-text {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 2rem;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}

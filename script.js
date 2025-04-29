@@ -24,14 +24,75 @@ updateCountdown();
 
 const dresscodeGallery = document.querySelector(".dresscode__gallery");
 
+let autoScrollActive = false;
+
 function autoScroll() {
-  dresscodeGallery.scrollLeft += 1; // Чем больше число, тем быстрее
+  if (!autoScrollActive) return;
+  dresscodeGallery.scrollLeft += 1;
   if (
     dresscodeGallery.scrollLeft >=
     dresscodeGallery.scrollWidth - dresscodeGallery.clientWidth
   ) {
-    return;
+    dresscodeGallery.scrollLeft = 0;
   }
+  requestAnimationFrame(autoScroll);
 }
 
-setInterval(autoScroll, 20); // Чем меньше интервал, тем плавнее
+const observerGallery = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        autoScrollActive = true;
+        requestAnimationFrame(autoScroll);
+      } else {
+        autoScrollActive = false;
+      }
+    });
+  },
+  {
+    threshold: 0.5, // 50% блока должно быть видно, можешь подстроить });
+  }
+);
+observerGallery.observe(dresscodeGallery);
+
+const sections = document.querySelectorAll("section");
+
+const observerSections = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observerSections.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2, // 50% блока должно быть видно, можешь подстроить });
+  }
+);
+sections.forEach((el) => {
+  observerSections.observe(el);
+});
+
+const dresscodeColors = document.querySelectorAll(".dresscode__colors-block");
+
+const dresscodeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        dresscodeColors.forEach((item) => {
+          item.classList.remove("no-animation");
+          item.addEventListener("animationend", () => {
+            item.style.opacity = 1;
+          });
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.2, // 50% блока должно быть видно, можешь подстроить });
+  }
+);
+dresscodeColors.forEach((el) => {
+  dresscodeObserver.observe(el);
+});
