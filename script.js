@@ -47,19 +47,16 @@ const observer = new IntersectionObserver(
       const target = entry.target;
 
       if (entry.isIntersecting) {
-        // Анимация появления секций
         if (target.tagName === "SECTION") {
           target.classList.add("visible");
           observer.unobserve(target);
         }
 
-        // Dresscode блок с автоскроллом
         if (target === dresscodeGallery) {
           autoScrollActive = true;
           requestAnimationFrame(autoScroll);
         }
 
-        // Анимация dresscode цветов
         if (target.classList.contains("dresscode__colors-block")) {
           target.classList.remove("no-animation");
           target.addEventListener(
