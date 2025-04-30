@@ -38,61 +38,49 @@ function autoScroll() {
   requestAnimationFrame(autoScroll);
 }
 
-const observerGallery = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        autoScrollActive = true;
-        requestAnimationFrame(autoScroll);
-      } else {
-        autoScrollActive = false;
-      }
-    });
-  },
-  {
-    threshold: 0.5, // 50% блока должно быть видно, можешь подстроить });
-  }
-);
-observerGallery.observe(dresscodeGallery);
-
+const dresscodeColors = document.querySelectorAll(".dresscode__colors-block");
 const sections = document.querySelectorAll("section");
 
-const observerSections = new IntersectionObserver(
+const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
+      const target = entry.target;
+
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observerSections.unobserve(entry.target);
+        // Анимация появления секций
+        if (target.tagName === "SECTION") {
+          target.classList.add("visible");
+          observer.unobserve(target);
+        }
+
+        // Dresscode блок с автоскроллом
+        if (target === dresscodeGallery) {
+          autoScrollActive = true;
+          requestAnimationFrame(autoScroll);
+        }
+
+        // Анимация dresscode цветов
+        if (target.classList.contains("dresscode__colors-block")) {
+          target.classList.remove("no-animation");
+          target.addEventListener(
+            "animationend",
+            () => {
+              target.style.opacity = 1;
+            },
+            { once: true }
+          );
+          observer.unobserve(target);
+        }
+      } else {
+        if (target === dresscodeGallery) {
+          autoScrollActive = false;
+        }
       }
     });
   },
-  {
-    threshold: 0.2, // 50% блока должно быть видно, можешь подстроить });
-  }
+  { threshold: 0.2 }
 );
-sections.forEach((el) => {
-  observerSections.observe(el);
-});
 
-const dresscodeColors = document.querySelectorAll(".dresscode__colors-block");
-
-const dresscodeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        dresscodeColors.forEach((item) => {
-          item.classList.remove("no-animation");
-          item.addEventListener("animationend", () => {
-            item.style.opacity = 1;
-          });
-        });
-      }
-    });
-  },
-  {
-    threshold: 0.2, // 50% блока должно быть видно, можешь подстроить });
-  }
-);
-dresscodeColors.forEach((el) => {
-  dresscodeObserver.observe(el);
-});
+sections.forEach((el) => observer.observe(el));
+dresscodeColors.forEach((el) => observer.observe(el));
+observer.observe(dresscodeGallery);
