@@ -285,19 +285,33 @@
             method="POST"
           >
             <p>Ваше имя и фамилия</p>
-            <input type="text" name="name" paceholder="Иван Иванов" required />
+            <input type="text" name="name" placeholder="Иван Иванов" required />
             <p>Сможете ли присутствовать?</p>
-            <label for="">
-              <input type="radio" name="contact" id="" required />
+
+            <label>
+              <input type="radio" name="contact" required />
               Конечно, буду
             </label>
-            <label for="">
-              <input type="radio" name="contact" id="" required />
+
+            <label>
+              <input type="radio" name="contact" required />
               К сожалению, нет
+            </label>
+            <p>Вы будете один или с парой?</p>
+
+            <label>
+              <input type="radio" name="contact" required />
+              Да, я буду с парой
+            </label>
+            <label>
+              <input type="radio" name="contact" required />
+              Нет, я приду один
             </label>
             <input type="text" name="_honey" style="display: none" />
             <input type="hidden" name="_captcha" value="false" />
-            <button class="button" type="submit">ОТПРАВИТЬ</button>
+            <button class="button" name="submit" type="submit">
+              ОТПРАВИТЬ
+            </button>
           </form>
         </div>
       </section>
