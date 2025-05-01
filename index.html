@@ -13,7 +13,11 @@
           <p>АЛЕКСАНДР</p>
           <p>& СОФЬЯ</p>
         </div>
-        <img src="./img/AS.png" alt="Alexander and Sofya photo" width="325" />
+        <img
+          src="./images/AS.png"
+          alt="Alexander and Sofya photo"
+          width="325"
+        />
         <div class="header__date">
           <p>ПРИГЛАШЕНИЕ НА СВАДЬБУ</p>
           <p>07 | 08 | 2025</p>
@@ -64,7 +68,7 @@
       <section class="location">
         <div class="location__container container">
           <h5>МЕСТО ПРОВЕДЕНИЯ</h5>
-          <img src="./img/citadel.jfif" alt="Location photo" />
+          <img src="./images/citadel.jfif" alt="Location photo" />
           <p>ПАРК ОТЕЛЬ</p>
           <p>«ЦИТАДЕЛЬ»</p>
           <p>г. Тула, посёлок Рождественский</p>
@@ -186,7 +190,7 @@
           <div class="dresscode__gallery">
             <div class="dresscode__photo">
               <img
-                src="./img/IMG_0110.JPG"
+                src="./images/IMG_0110.JPG"
                 alt="Dresscode photo"
                 width="300"
                 height="500"
@@ -194,16 +198,7 @@
             </div>
             <div class="dresscode__photo">
               <img
-                src="./img/IMG_0111.JPG"
-                alt="Dresscode photo"
-                width="300"
-                height="500"
-              />
-            </div>
-
-            <div class="dresscode__photo">
-              <img
-                src="./img/IMG_0116.JPG"
+                src="./images/IMG_0131.JPG"
                 alt="Dresscode photo"
                 width="300"
                 height="500"
@@ -211,7 +206,7 @@
             </div>
             <div class="dresscode__photo">
               <img
-                src="./img/IMG_0117.JPG"
+                src="./images/IMG_0111.JPG"
                 alt="Dresscode photo"
                 width="300"
                 height="500"
@@ -220,7 +215,82 @@
 
             <div class="dresscode__photo">
               <img
-                src="./img/IMG_0121.JPG"
+                src="./images/IMG_0136.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0116.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0127.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0134.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0117.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0138.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0133.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0139.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0128.JPG"
+                alt="Dresscode photo"
+                width="300"
+                height="500"
+              />
+            </div>
+            <div class="dresscode__photo">
+              <img
+                src="./images/IMG_0140.JPG"
                 alt="Dresscode photo"
                 width="300"
                 height="500"
@@ -280,31 +350,33 @@
             Ваши ответы очень помогут нам при организации свадьбы. Пожалуйста,
             заполните форму до 07.07.2025
           </p>
-          <form
-            action="https://formsubmit.co/alex_kozhenkin@mail.ru"
-            method="POST"
-          >
+          <form action="https://formspree.io/f/xwpovdrb" method="POST">
             <p>Ваше имя и фамилия</p>
-            <input type="text" name="name" placeholder="Иван Иванов" required />
+            <input
+              type="text"
+              name="Имя гостя"
+              placeholder="Иван Иванов"
+              required
+            />
             <p>Сможете ли присутствовать?</p>
 
             <label>
-              <input type="radio" name="presence" required />
+              <input type="radio" name="Присутствие" value="Да" required />
               Конечно, буду
             </label>
 
             <label>
-              <input type="radio" name="presence" required />
+              <input type="radio" name="Присутствие" value="Нет" required />
               К сожалению, нет
             </label>
             <p>Вы будете один или с парой?</p>
 
             <label>
-              <input type="radio" name="couple" required />
+              <input type="radio" name="Пара" value="Да" required />
               Да, я буду с парой
             </label>
             <label>
-              <input type="radio" name="couple" required />
+              <input type="radio" name="Пара" value="Нет" required />
               Нет, я приду один
             </label>
             <input type="text" name="_honey" style="display: none" />
