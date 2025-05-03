@@ -335,10 +335,10 @@ input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./img/wedding.jpg);
+  background-image: url(./images/countdown-background.jpg);
+  background-position: center -9rem;
   background-size: cover;
-  color: white;
-  height: 200px;
+  height: 300px;
 }
 .countdown__time {
   font-size: 2rem;
