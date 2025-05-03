@@ -336,7 +336,7 @@ input {
   align-items: center;
   justify-content: center;
   background-image: url(./images/countdown-background.jpg);
-  background-position: center -9rem;
+  background-position: center;
   background-size: cover;
   height: 300px;
 }
