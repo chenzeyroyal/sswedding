@@ -13,11 +13,7 @@
           <p>АЛЕКСАНДР</p>
           <p>& СОФЬЯ</p>
         </div>
-        <img
-          src="./images/AS.png"
-          alt="Alexander and Sofya photo"
-          width="325"
-        />
+        <img src="./images/AS.png" alt="Жених и невеста" width="325" />
         <div class="header__date">
           <p>ПРИГЛАШЕНИЕ НА СВАДЬБУ</p>
           <p>07 | 08 | 2025</p>
@@ -54,8 +50,9 @@
               <div class="welcome__calendar-day-numbers-item">9</div>
             </div>
             <img
-              src="./icons/heart-04.png"
+              src="./icons/heart.png"
               alt=""
+              aria-hidden="true"
               width="60"
               height="60"
               class="welcome__calendar-heart"
@@ -68,7 +65,7 @@
       <section class="location">
         <div class="location__container container">
           <h5>МЕСТО ПРОВЕДЕНИЯ</h5>
-          <img src="./images/citadel.jfif" alt="Location photo" />
+          <img src="./images/citadel.jfif" alt="Парк-отель Цитадель" />
           <p>ПАРК ОТЕЛЬ</p>
           <p>«ЦИТАДЕЛЬ»</p>
           <p>г. Тула, посёлок Рождественский</p>
@@ -86,11 +83,12 @@
         <h5>ТАЙМИНГ</h5>
         <div class="timing__container">
           <div class="timing__event-column left">
-            <div class="timing__event-block left">
+            <div class="timing__event-block left" data-js-timingEventBlock>
               <div class="timing__event-icon">
                 <img
                   src="./icons/glasses.GIF"
-                  alt="Glasses icon"
+                  alt=""
+                  aria-hidden="true"
                   width="60"
                   height="60"
                 />
@@ -98,11 +96,12 @@
               <div class="timing__event-time">14:30</div>
               <div class="timing__event-text">СБОР ГОСТЕЙ</div>
             </div>
-            <div class="timing__event-block left">
+            <div class="timing__event-block left" data-js-timingEventBlock>
               <div class="timing__event-icon">
                 <img
                   src="./icons/glasses.GIF"
-                  alt="Glasses icon"
+                  alt=""
+                  aria-hidden="true"
                   width="60"
                   height="60"
                 />
@@ -110,11 +109,12 @@
               <div class="timing__event-time">15:30</div>
               <div class="timing__event-text">ФУРШЕТ</div>
             </div>
-            <div class="timing__event-block left">
+            <div class="timing__event-block left" data-js-timingEventBlock>
               <div class="timing__event-icon">
                 <img
                   src="./icons/cake.GIF"
-                  alt="Glasses icon"
+                  alt=""
+                  aria-hidden="true"
                   width="60"
                   height="60"
                 />
@@ -130,11 +130,12 @@
             <div class="timing__subline left"></div>
           </div>
           <div class="timing__event-column right">
-            <div class="timing__event-block right">
+            <div class="timing__event-block right" data-js-timingEventBlock>
               <div class="timing__event-icon">
                 <img
                   src="./icons/rings.GIF"
-                  alt="Rings icon"
+                  alt=""
+                  aria-hidden="true"
                   width="60"
                   height="60"
                 />
@@ -142,11 +143,12 @@
               <div class="timing__event-time">15:00</div>
               <div class="timing__event-text">СВАДЕБНАЯ <br />ЦЕРЕМОНИЯ</div>
             </div>
-            <div class="timing__event-block right">
+            <div class="timing__event-block right" data-js-timingEventBlock>
               <div class="timing__event-icon">
                 <img
                   src="./icons/banket.GIF"
-                  alt="Rings icon"
+                  alt=""
+                  aria-hidden="true"
                   width="60"
                   height="60"
                 />
@@ -154,11 +156,12 @@
               <div class="timing__event-time">17:00</div>
               <div class="timing__event-text">БАНКЕТ</div>
             </div>
-            <div class="timing__event-block right">
+            <div class="timing__event-block right" data-js-timingEventBlock>
               <div class="timing__event-icon">
                 <img
                   src="./icons/banket.GIF"
-                  alt="Rings icon"
+                  alt=""
+                  aria-hidden="true"
                   width="60"
                   height="60"
                 />
@@ -178,20 +181,44 @@
             своих нарядах вы поддержите цветовую гамму нашей свадьбы.
           </p>
           <div class="dresscode__colors">
-            <div class="dresscode__colors-block no-animation first"></div>
-            <div class="dresscode__colors-block no-animation"></div>
-            <div class="dresscode__colors-block no-animation"></div>
-            <div class="dresscode__colors-block no-animation"></div>
-            <div class="dresscode__colors-block no-animation"></div>
-            <div class="dresscode__colors-block no-animation"></div>
-            <div class="dresscode__colors-block no-animation"></div>
-            <div class="dresscode__colors-block no-animation"></div>
+            <div
+              class="dresscode__colors-block no-animation first"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
+            <div
+              class="dresscode__colors-block no-animation"
+              data-js-dresscodeColors
+            ></div>
           </div>
-          <div class="dresscode__gallery">
+          <div class="dresscode__gallery" data-js-dresscodeGallery>
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0110.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -199,7 +226,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0131.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -207,7 +234,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0111.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -216,7 +243,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0136.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -224,7 +251,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0116.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -233,7 +260,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0127.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -242,7 +269,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0134.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -251,7 +278,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0117.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -259,7 +286,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0138.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -267,7 +294,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0133.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -275,7 +302,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0139.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -283,7 +310,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0128.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -291,7 +318,7 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0140.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
@@ -299,14 +326,14 @@
             <div class="dresscode__photo">
               <img
                 src="./images/IMG_0121.JPG"
-                alt="Dresscode photo"
+                alt="Человек с одежде, соответствующей дресскоду"
                 width="300"
                 height="500"
               />
             </div>
           </div>
           <div class="dresscode__scroll-hint">
-            <img src="./icons/arrow-right.svg" alt="" />
+            <img src="./icons/arrow-right.svg" alt="" aria-hidden="true" />
             <p>ЛИСТАЙ</p>
           </div>
         </div>
@@ -327,7 +354,7 @@
                 пожеланием на какой повод нам её открыть.
               </p>
             </div>
-            <img src="./images/gifft-2.png" alt="Gift icon" width="75" />
+            <img src="./icons/gift.png" alt="" aria-hidden="true" width="75" />
           </div>
         </div>
       </section>
@@ -350,23 +377,27 @@
             />
             <p>Сможете ли присутствовать?</p>
 
-            <label>
+            <label class="custom-radio">
               <input type="radio" name="Присутствие" value="Да" required />
+              <span class="checkmark"></span>
               Конечно, буду
             </label>
 
-            <label>
+            <label class="custom-radio">
               <input type="radio" name="Присутствие" value="Нет" required />
+              <span class="checkmark"></span>
               К сожалению, нет
             </label>
             <p>Вы будете один или с парой?</p>
 
-            <label>
+            <label class="custom-radio">
               <input type="radio" name="Пара" value="Да" required />
+              <span class="checkmark"></span>
               Да, я буду с парой
             </label>
-            <label>
+            <label class="custom-radio">
               <input type="radio" name="Пара" value="Нет" required />
+              <span class="checkmark"></span>
               Нет, я приду один
             </label>
             <input type="text" name="_honey" style="display: none" />
@@ -377,19 +408,19 @@
           </form>
         </div>
       </section>
-      <section class="countdown">
-        <div class="countdown__block">
-          <p>ДО ВСТРЕЧИ ЧЕРЕЗ</p>
-          <div class="countdown__time"></div>
-          <div class="countdown__text">
-            <div>ДНЕЙ</div>
-            <div>ЧАСОВ</div>
-            <div>МИНУТ</div>
-            <div>СЕКУНД</div>
-          </div>
-        </div>
-      </section>
     </main>
+    <footer class="countdown">
+      <div class="countdown__block">
+        <p>ДО ВСТРЕЧИ ЧЕРЕЗ</p>
+        <div class="countdown__time"></div>
+        <div class="countdown__text">
+          <div>ДНЕЙ</div>
+          <div>ЧАСОВ</div>
+          <div>МИНУТ</div>
+          <div>СЕКУНД</div>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

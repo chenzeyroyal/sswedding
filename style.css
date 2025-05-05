@@ -67,7 +67,7 @@ body {
   gap: 1rem;
 }
 .header__container {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   justify-content: center;
 }
 .header__title {
@@ -99,29 +99,22 @@ header {
   align-items: center;
   gap: 3rem;
 }
+main {
+  padding-bottom: 3rem;
+}
 .welcome__container p {
   text-align: justify;
 }
-section {
-  opacity: 0;
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  transform: translateY(-2rem);
-}
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 .welcome__calendar {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-family: "Comporant";
-  font-size: 20px;
+  font-size: 1.25rem;
   position: relative;
   margin-top: 1rem;
 }
 .welcome__calendar p {
-  font-family: "Comporant";
   color: var(--color-dark-02);
   margin-inline: auto;
 }
@@ -130,6 +123,14 @@ section.visible {
   top: 65%;
   left: 54.5%;
   animation: rotating 3s infinite;
+}
+.welcome__calendar-heart::after {
+  content: "1";
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  color: red;
+  position: absolute;
 }
 
 @keyframes rotating {
@@ -196,13 +197,17 @@ section.visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 0;
 }
 .timing__event-block.left {
   margin-bottom: 100%;
+  transform: translateX(-2rem);
 }
 .timing__event-block.right {
   margin-top: 50%;
+  transform: translateX(2rem);
 }
 .timing__event-block.right::before {
   content: "";
@@ -231,7 +236,7 @@ section.visible {
 }
 .splitter {
   width: 70%;
-  height: 1px;
+  height: 0.063rem;
   background-color: #888;
   border-radius: 50%;
 }
@@ -244,8 +249,8 @@ section.visible {
   margin-top: 1rem;
 }
 .dresscode__colors-block {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   animation: fadeIn 0.5s;
   opacity: 0;
@@ -259,31 +264,31 @@ section.visible {
 }
 .dresscode__colors div:nth-of-type(2) {
   animation-delay: 0.6s;
-  background-color: #cac4b0;
+  background-color: #efdecd;
 }
 .dresscode__colors div:nth-of-type(3) {
   animation-delay: 1s;
-  background-color: #997c6e;
+  background-color: #cac4b0;
 }
 .dresscode__colors div:nth-of-type(4) {
   animation-delay: 1.4s;
-  background-color: #6c7059;
+  background-color: #d39b85;
 }
 .dresscode__colors div:nth-of-type(5) {
   animation-delay: 1.8s;
-  background-color: #efdecd;
+  background-color: #997c6e;
 }
 .dresscode__colors div:nth-of-type(6) {
   animation-delay: 2.2s;
-  background-color: #d39b85;
+  background-color: #a5694f;
 }
 .dresscode__colors div:nth-of-type(7) {
   animation-delay: 2.6s;
-  background-color: #a5694f;
+  background-color: #592d00;
 }
 .dresscode__colors div:nth-of-type(8) {
   animation-delay: 3s;
-  background-color: #592d00;
+  background-color: #6c7059;
 }
 @keyframes fadeIn {
   0% {
@@ -296,9 +301,7 @@ section.visible {
     opacity: 1;
   }
 }
-.no-animation {
-  animation: none;
-}
+
 .dresscode__gallery {
   overflow-x: auto;
   white-space: nowrap;
@@ -309,7 +312,7 @@ section.visible {
   display: inline-block;
 }
 .dresscode__photo img {
-  max-height: 500px;
+  max-height: 31.25rem;
 }
 .dresscode__scroll-hint {
   display: flex;
@@ -322,10 +325,7 @@ section.visible {
   justify-content: space-around;
 }
 .wishes__text {
-  width: 50%;
-}
-input {
-  color: black;
+  width: 70%;
 }
 .countdown {
   width: 100%;
@@ -340,15 +340,15 @@ input {
   color: white;
   background-position: center;
   background-size: cover;
-  height: 200px;
+  height: 12.5rem;
 }
 .countdown__time {
   font-size: 2rem;
 }
 .countdown__text {
-  margin-top: 5px;
+  margin-top: 0.313rem;
   display: flex;
-  width: 225px;
+  width: 14.063rem;
   font-size: 10px;
   justify-content: space-between;
 }
@@ -363,4 +363,50 @@ form p {
 }
 input {
   padding: 0.313rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.custom-radio {
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+}
+.custom-radio .checkmark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  left: 0;
+  top: 0;
+}
+input[type="radio"]:checked + .checkmark:after {
+  content: "";
+  position: absolute;
+  top: 0.188rem;
+  left: 0.188rem;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+/* JavaScript */
+section {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(-2rem);
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timing__event-block.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.no-animation {
+  animation: none;
 }

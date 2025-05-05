@@ -22,8 +22,7 @@ function updateCountdown() {
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
-const dresscodeGallery = document.querySelector(".dresscode__gallery");
-
+const dresscodeGallery = document.querySelector("[data-js-dresscodeGallery]");
 let autoScrollActive = false;
 
 function autoScroll() {
@@ -38,8 +37,9 @@ function autoScroll() {
   requestAnimationFrame(autoScroll);
 }
 
-const dresscodeColors = document.querySelectorAll(".dresscode__colors-block");
+const dresscodeColors = document.querySelectorAll("[data-js-dresscodeColors]");
 const sections = document.querySelectorAll("section");
+const eventBlocks = document.querySelectorAll("[data-js-timingEventBlock]");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -68,6 +68,11 @@ const observer = new IntersectionObserver(
           );
           observer.unobserve(target);
         }
+        eventBlocks.forEach((block) => {
+          if (target === block) {
+            block.classList.add("visible");
+          }
+        });
       } else {
         if (target === dresscodeGallery) {
           autoScrollActive = false;
@@ -81,3 +86,13 @@ const observer = new IntersectionObserver(
 sections.forEach((el) => observer.observe(el));
 dresscodeColors.forEach((el) => observer.observe(el));
 observer.observe(dresscodeGallery);
+eventBlocks.forEach((el) => {
+  observer.observe(el);
+});
+
+function setVh() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+setVh();
+window.addEventListener("resize", setVh);
