@@ -256,7 +256,24 @@ main {
   animation: fadeIn 0.5s;
   opacity: 0;
 }
-
+.dresscode__scroll-hint img {
+  animation: moveInline 3s infinite;
+}
+@keyframes moveInline {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0.5rem);
+  }
+  35% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+}
 .dresscode__colors-block:not(.first) {
   margin-left: -0.5rem;
 }
@@ -410,4 +427,20 @@ section.visible {
 }
 .no-animation {
   animation: none;
+}
+
+label:active {
+  background: none;
+  outline: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  label:hover {
+    background-color: #eee; /* пример */
+    cursor: pointer;
+  }
+}
+label {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
 }
