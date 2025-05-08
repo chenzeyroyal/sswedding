@@ -185,12 +185,12 @@ main {
 .timing__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
 }
 .timing__event-column {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  overflow: hidden;
 }
 
 .timing__event-block {
