@@ -120,8 +120,8 @@ main {
 }
 .welcome__calendar-heart {
   position: absolute;
-  top: 65%;
-  left: 54.5%;
+  top: 5.438rem;
+  left: 6.688rem;
   animation: rotating 3s infinite;
 }
 .welcome__calendar-heart::after {
